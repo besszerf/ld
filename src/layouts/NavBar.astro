@@ -1,0 +1,49 @@
+---
+// Navbar idea
+// https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_bw_portfolio&stacked=h
+import { Image } from "astro:assets";
+import logo from "../assets/images/base_logo_short.png";
+---
+<div class="w3-top">
+  <div class="w3-bar w3-white">
+    <a href="/" class="w3-bar-item w3-xlarge"><Image src={logo} alt="Hero image" height={50} /></a>
+    <span class="w3-bar-item w3-xlarge w3-right w3-button w3-ld-yellow w3-hover-opacity" onclick="openNav()"><i class="fa fa-bars"></i></span>
+  </div>
+</div>
+<nav class="w3-sidebar w3-black w3-animate-right w3-xlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+    <div class="w3-bar-block w3-center">
+      <a href="#ceg" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i class="fa fa-registered"></i> Cégbemutatás</a>
+      <a href="#villszer" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i class="fa fa-plug"></i> Villanyszerelés</a>
+      <a href="#erintved" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i class="fa fa-flash"></i> Érintésvédelmi felülvizsgálat</a>
+      <a href="#eonregszer" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i class="fa fa-wrench"></i> E.ON regisztrált szerelő</a>
+      <a href="#klimaszer" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i class="fa fa-snowflake-o"></i> Klímaszerelés</a>
+      <a href="#elonyok" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i class="fa fa-lightbulb-o"></i> Miért minket válasszon</a>
+      <a href="#kapcsolat" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i class="fa fa-envelope"></i> Kapcsolat</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+.nav_logo {
+  background-image: url(${logo.src});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 150px;
+}
+</style>
+
+<script is:inline>
+// Open - close navbar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
