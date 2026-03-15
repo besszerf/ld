@@ -1,5 +1,5 @@
 ---
-title: 'Lakossági és ipari villanyszerelés – hivatalosan, garanciával'
+title: 'Lakossági és ipari villanyszerelés'
 ---
 
 Az LD VillSzer Kft. lakossági és ipari villanyszerelési munkákat vállal, minden esetben hivatalos keretek között, dokumentáltan és számlával. A kivitelezésekre 3 év garanciát biztosítunk.

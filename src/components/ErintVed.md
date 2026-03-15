@@ -1,5 +1,5 @@
 ---
-title: 'Érintésvédelmi felülvizsgálat – hivatalos jegyzőkönyvvel'
+title: 'Érintésvédelmi felülvizsgálat'
 ---
 
 Az érintésvédelmi felülvizsgálat alapvető feltétele a biztonságos üzemeltetésnek. Az LD VillSzer Kft. teljesen hivatalosan végzi az érintésvédelmi méréseket és felülvizsgálatokat.

@@ -1,7 +1,5 @@
 ---
 title: 'Kapcsolat'
-telefon: '20/410-0109'
-email: 'dvlelkes@gmail.com'
 ---
 
 

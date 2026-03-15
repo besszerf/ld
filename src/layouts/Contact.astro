@@ -1,5 +1,8 @@
 ---
 import {frontmatter, Content} from '../components/Contact.md';
+import {frontmatter as fm} from '../components/Cegadatok.md';
+const emailUser = fm.emailUser;
+const emailDomain = fm.emailDomain;
 ---
 
 <!-- Contact Section -->
@@ -10,9 +13,9 @@ import {frontmatter, Content} from '../components/Contact.md';
     <Content />
   </div>
   <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Cím: {frontmatter.cím}</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Telefon: {frontmatter.telefon}</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: {frontmatter.email}</p>
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Cím: {fm.address}</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Telefon: {fm.phone}</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: <a id="email"></a></p>
     <br>
     <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
@@ -27,3 +30,19 @@ import {frontmatter, Content} from '../components/Contact.md';
     </form>
   </div>
 </div>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+</style>
+
+<script is:inline define:vars={{emailUser, emailDomain}}>
+const user = emailUser;
+const domain = emailDomain;
+const email = user + "@" + domain;
+
+const link = document.getElementById("email");
+link.href = "mailto:" + email;
+link.textContent = email;
+</script>

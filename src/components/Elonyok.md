@@ -1,8 +1,3 @@
----
-title: 'Teljesen hivatalosan. Garanciával. Megbízhatóan.'
----
-
-
 #### Az LD VillSzer Kft. olyan szolgáltatást nyújt, ahol az ügyfél biztos lehet abban, hogy:
 
 • minden munka hivatalosan, számlával készül

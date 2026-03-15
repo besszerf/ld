@@ -1,5 +1,5 @@
 ---
-title: 'Klímaszerelés – hivatalosan, igényesen'
+title: 'Klímaszerelés'
 ---
 
 

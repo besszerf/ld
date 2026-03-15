@@ -1,5 +1,5 @@
 ---
-title: 'E.ON regisztrált villanyszerelő – hivatalos ügyintézés'
+title: 'E.ON regisztrált villanyszerelő'
 ---
 
 

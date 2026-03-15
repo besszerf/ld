@@ -1,7 +1,9 @@
 ---
 import heroImage from "../assets/images/hero.png";
+import {frontmatter as fm} from '../components/Cegadatok.md';
+
 ---
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home" style={`--bg:url(${heroImage.src})`}>
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home" style={`background-image: url(${heroImage.src});`}>
   <div class="w3-display-left w3-text-white" style="padding:48px">
     <span class="w3-jumbo w3-hide-small w3-animate-right">Szakértelem, precizitás.</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Szakértelem, precizitás.</span><br>
@@ -9,16 +11,22 @@ import heroImage from "../assets/images/hero.png";
     <i class="fa fa-check"></i> <span class="w3-large">Klímaszerelés</span><br>
     <i class="fa fa-check"></i> <span class="w3-large">Érintésvédelmi felülvizsgálat</span><br>
     <i class="fa fa-check"></i> <span class="w3-large">E.ON regisztrált szerelő</span><br>
-    <p>Hol vagy elérhető? Pl. Mohács, Bóly és térsége, stb.</p>
+    <p class="w3-large">Baranya megye, elsősorban Pécs, Mohács és térsége</p>
     <p class="w3-margin-top-32"><a href="#ceg" class="w3-button w3-orange w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off w3-animate-top">Tudjon meg többet cégünkről</a></p>
   </div> 
-  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+  <!-- <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     <i class="fa fa-snapchat w3-hover-opacity"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div> -->
+  <div class="w3-display-bottomleft w3-text-grey w3-small  w3-hide-large w3-hide-medium">
+    <span>Cím: {fm.address}</span> | <span>Adó: {fm.taxNumber}</span> | <span>Tel: {fm.phone}</span>
+  </div>
+  <div class="w3-display-bottomleft w3-text-grey w3-hide-small">
+    <span>Cím: {fm.address}</span> | <span>Adó: {fm.taxNumber}</span> | <span>Tel: {fm.phone}</span>
   </div>
 </header>
 <style>
@@ -26,7 +34,7 @@ import heroImage from "../assets/images/hero.png";
 .bgimg-1 {
   background-position: center;
   background-size: cover;
-  background-image: var(--bg);
+  background-image: var(--bgUrl);
   min-height: 100%;
 }
 </style>
