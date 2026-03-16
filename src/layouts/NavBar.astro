@@ -5,9 +5,19 @@ import { Image } from "astro:assets";
 import logo from "../assets/images/base_logo.svg";
 ---
 <div class="w3-top">
-  <div class="w3-bar w3-white">
-    <a href="/" class="w3-bar-item w3-large"><Image src={logo} alt="Hero image" height={48} /></a>
-    <span class="w3-bar-item w3-large w3-right w3-button w3-ld-yellow w3-hover-opacity" onclick="openNav()"><i class="fa fa-bars"></i></span>
+  <div class="nav-shell w3-white">
+    <a href="/" class="brand-link">
+      <Image src={logo} alt="Logo" class="navbar-logo" />
+    </a>
+
+    <button
+      type="button"
+      class="nav-toggle w3-ld-yellow w3-hover-opacity"
+      onclick="openNav()"
+      aria-label="Open menu"
+    >
+      <i class="fa fa-bars"></i>
+    </button>
   </div>
 </div>
 <nav class="w3-sidebar w3-black w3-animate-right w3-xlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
@@ -26,12 +36,67 @@ import logo from "../assets/images/base_logo.svg";
   </div>
 </nav>
 
-<style define:vars={{ logoUrl: `url(${logo.src})` }}>
-.nav_logo {
-  background-image: var(--logoUrl);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
+<style>
+.nav-shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 0;
+  min-height: 64px
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  flex: 1 1 auto;
+  padding: 4px 12px;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  display: block;
+  height: 40px;
+  width: auto;
+  max-width: min(56vw, 240px);
+}
+
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  min-width: 44px;
+  padding: 0 12px;
+  margin: 0;
+  border: 0;
+  background: #e6ae00;
+  color: #000;
+  line-height: 1;
+}
+
+.nav-toggle i {
+  display: block;
+  font-size: 28px;
+}
+
+@media (max-width: 480px) {
+  .brand-link {
+    padding: 6px 10px;
+  }
+
+  .navbar-logo {
+    height: 36px;
+    max-width: 58vw;
+  }
+
+  .nav-toggle {
+    width: 64px;
+    min-width: 64px;
+    height: 64px;
+    padding: 0;
+  }
 }
 </style>
 
